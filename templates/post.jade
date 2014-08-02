@@ -1,15 +1,13 @@
 html
   head
-    title gvn.blog : "!{title}"
+    include header.jade
   body
     header
       h1=title
       p by Gavin Lazar Suntop
-      time=date
+      p
+        time=date
 
     main !{contents}
 
-    footer
-      h6 License
-      a(href='http://creativecommons.org/licenses/by-nc-sa/3.0/deed.en_US')
-        img(src='http://i.creativecommons.org/l/by-nc-sa/3.0/80x15.png')
+    include footer.jade

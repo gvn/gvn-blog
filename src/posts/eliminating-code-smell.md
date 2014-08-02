@@ -1,6 +1,6 @@
 ---
 title: Eliminating Code Smell With Grunt
-date: 2013-12-3
+date: December 12th, 2013
 template: post.jade
 ---
 

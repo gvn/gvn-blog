@@ -1,7 +1,9 @@
 {
+  "source": "src/posts",
+  "destination": "build",
   "metadata": {
     "title": "gvn.blog",
-    "description": "Gavin Lazar Suntop's blog."
+    "description": "More posts about food and revolutionary art."
   },
   "plugins": {
     "metalsmith-markdown": {},

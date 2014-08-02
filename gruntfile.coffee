@@ -8,17 +8,30 @@ module.exports = (grunt) ->
       less:
         files: [
           "templates/**/*.jade"
-          "src/**/*.md"
+          "src/posts/**/*.md"
+          "metalsmith.json"
         ]
         tasks: ["shell:build"]
+      assets:
+        files: [
+          "src/css/**/*.css"
+        ]
+        tasks: ["copy"]
 
     connect:
       server:
         options:
           port: 1881
           hostname: "localhost"
-          open: true
+          open: false
           base: "build"
+
+    copy:
+      css:
+        expand: true
+        cwd: 'src/css/'
+        src: '**'
+        dest: 'build/_assets/css/'
 
     shell:
       build:
@@ -27,7 +40,7 @@ module.exports = (grunt) ->
 
         command: "node_modules/.bin/metalsmith"
 
-  grunt.registerTask "default", ["shell:build"]
+  grunt.registerTask "default", ["shell:build", "copy"]
 
   grunt.registerTask "dev", [
     "shell:build"

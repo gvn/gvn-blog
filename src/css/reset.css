@@ -1,0 +1,122 @@
+/* GENERAL -------------------------------------------------------------------- */
+
+* {
+  padding: 0;
+  margin: 0;
+}
+
+*, *:before, *:after {
+  -moz-box-sizing: border-box;
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box;
+}
+
+/* Force HTML5 markup to display in IE6-9 and FF3 */
+
+article,
+aside,
+details,
+figcaption,
+figure,
+footer,
+header,
+hgroup,
+nav,
+section {
+  display: block;
+}
+
+body {
+  background: #fff;
+  color: #222;
+  font-size: 62.5%; /* 1em = 10px */
+  font-family: 'Palatino Linotype', 'Book Antiqua', Palatino, serif;
+  max-width: 960px;
+  margin: 10px auto;
+  padding: 10px;
+}
+
+/* TYPOGRAPHY ----------------------------------------------------------------- */
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  color: #333;
+  font-weight: 900;
+  line-height: 1.33em;
+  margin: 0.5em 0;
+}
+
+h1 {
+  font-size: 3.5em;
+}
+
+h2 {
+  font-size: 2.66em;
+}
+
+h3 {
+  font-size: 2em;
+}
+
+h4 {
+  font-size: 1.66em;
+}
+
+h5 {
+  font-size: 1.5em;
+}
+
+h6 {
+  font-size: 1.4em;
+}
+
+p {
+  font-size: 1.66em;
+  line-height: 1.66em;
+  margin: 0.5em 0;
+}
+
+ul,
+ol {
+  list-style: none;
+}
+
+strong {
+  font-weight: 900;
+}
+
+em {
+  font-style: italic;
+}
+
+pre {
+  font-size: 1.5em;
+  margin: 1em 0;
+}
+
+code {
+  font-size: 1em;
+}
+
+/* OTHER ---------------------------------------------------------------------- */
+
+a {
+  color: #618199;
+  text-decoration: none;
+}
+
+a:hover,
+a:active {
+  text-decoration: underline;
+  outline: 0;
+}
+
+img {
+  border: 0;
+  max-width: 100%;
+  height: auto;
+}
