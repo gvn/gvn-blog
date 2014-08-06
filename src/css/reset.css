@@ -29,7 +29,7 @@ section {
 body {
   background: #fff;
   color: #222;
-  font-size: 62.5%; /* 1em = 10px */
+  font-size: 16px;
   font-family: 'Palatino Linotype', 'Book Antiqua', Palatino, serif;
   max-width: 960px;
   margin: 10px auto;
@@ -51,31 +51,30 @@ h6 {
 }
 
 h1 {
-  font-size: 3.5em;
+  font-size: 35px;
 }
 
 h2 {
-  font-size: 2.66em;
+  font-size: 26px;
 }
 
 h3 {
-  font-size: 2em;
+  font-size: 20px;
 }
 
 h4 {
-  font-size: 1.66em;
+  font-size: 16px;
 }
 
 h5 {
-  font-size: 1.5em;
+  font-size: 15px;
 }
 
 h6 {
-  font-size: 1.4em;
+  font-size: 14px;
 }
 
 p {
-  font-size: 1.66em;
   line-height: 1.66em;
   margin: 0.5em 0;
 }
@@ -94,12 +93,35 @@ em {
 }
 
 pre {
-  font-size: 1.5em;
-  margin: 1em 0;
+  font-size: 12px;
+  font-family: monospace;
+  margin: 1.5em 0;
 }
 
 code {
-  font-size: 1em;
+  font-family: monospace;
+}
+
+p code {
+  font-size: 0.9em;
+}
+
+pre code {
+  font-family: Monaco, Consolas, "Lucida Console", monospace;
+}
+
+ul {
+  margin: 10px 0;
+}
+  ul li {
+    margin: 0.5em 0;
+  }
+
+hr {
+  border: 0;
+  border-bottom: 1px dotted #ccc;
+  background: #fff;
+  margin: 10px 0;
 }
 
 /* OTHER ---------------------------------------------------------------------- */
