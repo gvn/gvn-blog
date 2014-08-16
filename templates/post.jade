@@ -2,9 +2,14 @@ html
   head
     include header.jade
   body
+    h2
+      a(href="/")=global.title
+
+    hr
+
     header
       h1=title
-      p by Gavin Lazar Suntop
+      p by #{global.author}
       p
         time=date
 

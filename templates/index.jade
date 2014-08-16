@@ -2,12 +2,23 @@ html
   head
     include header.jade
   body
-    h1=title
-    p=description
+    header
+      h1=global.title
+      p=global.description
 
     ul
       each val in posts
         li
-          a(href=val.url)=val.title
+          a(href=val.path)=val.title
+
+    //- post object properties:
+
+    //- title
+    //- date
+    //- template
+    //- collection
+    //- contents
+    //- path
+    //- next
 
     include footer.jade

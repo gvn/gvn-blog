@@ -3,13 +3,15 @@ var markdown = require('metalsmith-markdown');
 var templates = require('metalsmith-templates');
 var permalinks = require('metalsmith-permalinks');
 var collections = require('metalsmith-collections');
-var metadata = require('metalsmith-metadata');
 
 var metalsmith = Metalsmith(__dirname)
   .destination('./build')
   .metadata({
-    title: 'gvn.blog',
-    description: 'More posts about food and revolutionary art.'
+    global: {
+      title: 'gvn.blog',
+      author: 'Gavin Lazar Suntop',
+      description: 'More posts about food and revolutionary art.'
+    }
   })
   .use(markdown())
   .use(permalinks())
