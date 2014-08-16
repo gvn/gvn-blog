@@ -8,14 +8,9 @@ module.exports = (grunt) ->
       less:
         files: [
           "templates/**/*.jade"
-          "src/posts/**/*.md"
+          "src/**/*"
         ]
         tasks: ["shell:build"]
-      assets:
-        files: [
-          "src/css/**/*.css"
-        ]
-        tasks: ["copy"]
 
     connect:
       server:
@@ -25,13 +20,6 @@ module.exports = (grunt) ->
           open: false
           base: "build"
 
-    copy:
-      css:
-        expand: true
-        cwd: 'src/css/'
-        src: '**'
-        dest: 'build/_assets/css/'
-
     shell:
       build:
         options:
@@ -39,7 +27,9 @@ module.exports = (grunt) ->
 
         command: "node build"
 
-  grunt.registerTask "default", ["shell:build", "copy"]
+  grunt.registerTask "default", [
+    "shell:build"
+  ]
 
   grunt.registerTask "dev", [
     "shell:build"

@@ -7,6 +7,7 @@ html
 
     ul
       each val in posts
-        li= val.title
+        li
+          a(href=val.url)=val.title
 
     include footer.jade
