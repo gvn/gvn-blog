@@ -9,7 +9,6 @@ module.exports = (grunt) ->
         files: [
           "templates/**/*.jade"
           "src/posts/**/*.md"
-          "metalsmith.json"
         ]
         tasks: ["shell:build"]
       assets:
@@ -38,7 +37,7 @@ module.exports = (grunt) ->
         options:
           async: true
 
-        command: "node_modules/.bin/metalsmith"
+        command: "node build"
 
   grunt.registerTask "default", ["shell:build", "copy"]
 

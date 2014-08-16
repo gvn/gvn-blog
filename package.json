@@ -10,6 +10,7 @@
     "jade": "^1.5.0",
     "jit-grunt": "^0.7.0",
     "metalsmith": "^0.2.3",
+    "metalsmith-collections": "^0.6.0",
     "metalsmith-markdown": "^0.2.1",
     "metalsmith-permalinks": "^0.1.1",
     "metalsmith-templates": "^0.1.0",

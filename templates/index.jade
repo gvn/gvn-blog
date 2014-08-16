@@ -5,4 +5,8 @@ html
     h1=title
     p=description
 
+    ul
+      each val in posts
+        li= val.title
+
     include footer.jade
