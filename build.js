@@ -18,7 +18,7 @@ var metalsmith = Metalsmith(__dirname)
   .use(collections({
     posts: {
       sortBy: 'date',
-      reverse: true
+      reverse: false
     }
   }))
   .use(templates('jade'))

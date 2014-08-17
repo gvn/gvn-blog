@@ -9,6 +9,7 @@ module.exports = (grunt) ->
         files: [
           "templates/**/*.jade"
           "src/**/*"
+          "build.js"
         ]
         tasks: ["shell:build"]
 

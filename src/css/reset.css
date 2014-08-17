@@ -133,8 +133,18 @@ a {
 
 a:hover,
 a:active {
-  text-decoration: underline;
+  text-decoration: none;
   outline: 0;
+  color: #666;
+}
+
+a:focus {
+  text-decoration: none;
+  text-transform: uppercase;
+  outline: 0;
+  padding: 5px;
+  margin: -5px;
+  background: #eee;
 }
 
 img {
@@ -142,3 +152,17 @@ img {
   max-width: 100%;
   height: auto;
 }
+
+footer, header {
+  margin: 40px 0;
+}
+
+/* COMPONENTS ----------------------------------------------------------------- */
+
+.icon-list {
+  font-size: 24px;
+}
+  .icon-list li {
+    display: inline-block;
+    margin-right: 0.5em;
+  }
