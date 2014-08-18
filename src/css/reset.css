@@ -124,10 +124,26 @@ hr {
   margin: 10px 0;
 }
 
+.logo {
+  background: rgba(255, 0, 194, 1);
+  color: rgba(250,250,250,1);
+  display: inline-block;
+  padding: 0.2em 0.5em;
+  font-weight: 100;
+}
+  .logo a, .logo a:hover {
+    color: rgba(250,250,250,1);
+  }
+
+  .logo a:focus {
+    background: none;
+    text-decoration: underline;
+  }
+
 /* OTHER ---------------------------------------------------------------------- */
 
 a {
-  color: #618199;
+  color: #073334;
   text-decoration: none;
 }
 
@@ -140,11 +156,9 @@ a:active {
 
 a:focus {
   text-decoration: none;
-  text-transform: uppercase;
   outline: 0;
-  padding: 5px;
-  margin: -5px;
-  background: #eee;
+  background: #444;
+  color: #eee;
 }
 
 img {
@@ -157,12 +171,26 @@ footer, header {
   margin: 40px 0;
 }
 
+header {
+  margin-top: 0;
+}
+
 /* COMPONENTS ----------------------------------------------------------------- */
 
 .icon-list {
-  font-size: 24px;
+  font-size: 20px;
 }
   .icon-list li {
     display: inline-block;
-    margin-right: 0.5em;
+    margin-right: 1em;
   }
+
+.square-link {
+  border: 1px solid rgba(0,0,0,0.25);
+  padding: 0.25em 0.5em;
+  font-family: monospace;
+  font-size: 12px;
+  line-height: 1.33em;
+  display: inline-block;
+  margin: 0.25em 0.5em 0.25em 0;
+}
