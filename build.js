@@ -8,9 +8,9 @@ var metalsmith = Metalsmith(__dirname)
   .destination('./build')
   .metadata({
     global: {
-      title: 'gvn.blog',
+      title: 'Gavin Lazar Suntop',
       author: 'Gavin Lazar Suntop',
-      description: 'More posts about food and revolutionary art.'
+      description: 'More Posts About Food and Revolutionary Art'
     }
   })
   .use(markdown())

@@ -31,7 +31,7 @@ body {
   color: #222;
   font-size: 16px;
   font-family: 'Palatino Linotype', 'Book Antiqua', Palatino, serif;
-  max-width: 960px;
+  max-width: 640px; /* 960 * (2/3) */
   margin: 10px auto;
   padding: 10px;
 }
@@ -45,7 +45,7 @@ h4,
 h5,
 h6 {
   color: #333;
-  font-weight: 900;
+  font-weight: 400;
   line-height: 1.33em;
   margin: 0.5em 0;
 }
@@ -107,7 +107,7 @@ p code {
 }
 
 pre code {
-  font-family: Monaco, Consolas, "Lucida Console", monospace;
+  font-family: Monaco, Consolas, 'Lucida Console', monospace;
 }
 
 ul {
@@ -125,25 +125,17 @@ hr {
 }
 
 .logo {
-  background: rgba(255, 0, 194, 1);
-  color: rgba(250,250,250,1);
+  font-family: 'Oxygen', 'Helvetica Neue', Helvetica, Arial, sans-serif;
   display: inline-block;
-  padding: 0.2em 0.5em;
-  font-weight: 100;
+  font-weight: 300;
+  text-transform: uppercase;
+  letter-spacing: 0.2em;
 }
-  .logo a, .logo a:hover {
-    color: rgba(250,250,250,1);
-  }
-
-  .logo a:focus {
-    background: none;
-    text-decoration: underline;
-  }
 
 /* OTHER ---------------------------------------------------------------------- */
 
 a {
-  color: #073334;
+  color: #618199; /* Slate blue */
   text-decoration: none;
 }
 
@@ -177,20 +169,29 @@ header {
 
 /* COMPONENTS ----------------------------------------------------------------- */
 
-.icon-list {
-  font-size: 20px;
+.link-list {
+  line-height: 2em;
 }
-  .icon-list li {
-    display: inline-block;
-    margin-right: 1em;
-  }
 
 .square-link {
-  border: 1px solid rgba(0,0,0,0.25);
+  border: 1px solid rgba(0,0,0,0.15);
   padding: 0.25em 0.5em;
-  font-family: monospace;
+  font-family: 'Oxygen', sans-serif;
   font-size: 12px;
   line-height: 1.33em;
   display: inline-block;
   margin: 0.25em 0.5em 0.25em 0;
+  letter-spacing: 0.2em;
 }
+
+.square-link-black {
+  background: rgba(0,0,0,0.25);
+  color: rgba(255,255,255,0.95);
+}
+
+/* UTILITIES ------------------------------------------------------------------ */
+
+.no-border {
+  border: none;
+}
+

@@ -5,9 +5,11 @@ html
     header
       h1.logo=global.title
       p
-        strong=global.description
+        em=global.description
 
-    ul
+    hr
+
+    ul.link-list
       each val in posts
         li
           a(href=val.path)=val.title
