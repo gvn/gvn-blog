@@ -3,6 +3,7 @@ var markdown = require('metalsmith-markdown');
 var templates = require('metalsmith-templates');
 var permalinks = require('metalsmith-permalinks');
 var collections = require('metalsmith-collections');
+var drafts = require('metalsmith-drafts');
 
 var metalsmith = Metalsmith(__dirname)
   .destination('./build')
@@ -13,6 +14,7 @@ var metalsmith = Metalsmith(__dirname)
       description: 'More Posts About Food and Revolutionary Art'
     }
   })
+  .use(drafts())
   .use(markdown())
   .use(permalinks())
   .use(collections({
