@@ -47,7 +47,7 @@ h6 {
   color: #333;
   font-weight: 400;
   line-height: 1.33em;
-  margin: 0.5em 0;
+  margin: 0.666666667em 0;
 }
 
 h1 {
@@ -59,19 +59,19 @@ h2 {
 }
 
 h3 {
-  font-size: 20px;
+  font-size: 22px;
 }
 
 h4 {
-  font-size: 16px;
+  font-size: 18px;
 }
 
 h5 {
-  font-size: 15px;
+  font-size: 16px;
 }
 
 h6 {
-  font-size: 14px;
+  font-size: 15px;
 }
 
 p {
@@ -119,7 +119,7 @@ ul {
 
 hr {
   border: 0;
-  border-bottom: 1px dotted #ccc;
+  border-bottom: 1px solid #ccc;
   background: #fff;
   margin: 10px 0;
 }
@@ -147,10 +147,8 @@ a:active {
 }
 
 a:focus {
-  text-decoration: none;
+  text-decoration: underline;
   outline: 0;
-  background: #444;
-  color: #eee;
 }
 
 img {
@@ -188,6 +186,27 @@ header {
   background: rgba(0,0,0,0.25);
   color: rgba(255,255,255,0.95);
 }
+
+/* PROCESSED MARKDOWN --------------------------------------------------------- */
+
+.markdown {
+  margin-bottom: 40px;
+}
+
+  .markdown ul {
+    list-style-type: disc;
+    list-style-position: inside;
+    margin: 20px 0;
+  }
+
+  .markdown hr {
+    margin: 40px 0;
+    border-bottom: 1px dotted #ddd;
+  }
+
+  .markdown img {
+    margin: 20px 0;
+  }
 
 /* UTILITIES ------------------------------------------------------------------ */
 

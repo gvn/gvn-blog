@@ -176,5 +176,3 @@ These packages can read options directly from your local `.*rc` files
 #### Additional Tools
 
 - [jscs](https://github.com/mdevils/node-jscs)
-
----
