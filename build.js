@@ -4,6 +4,7 @@ var templates = require('metalsmith-templates');
 var permalinks = require('metalsmith-permalinks');
 var collections = require('metalsmith-collections');
 var drafts = require('metalsmith-drafts');
+var tags = require('metalsmith-tags');
 
 var metalsmith = Metalsmith(__dirname)
   .destination('./build')
@@ -22,6 +23,13 @@ var metalsmith = Metalsmith(__dirname)
       sortBy: 'date',
       reverse: false
     }
+  }))
+  .use(tags({
+      handle: 'tags',                  // yaml key for tag list in you pages
+      path:'tags',                     // path for result pages
+      template:'tagged-posts.jade',    // template to use for tag listing
+      sortBy: 'date',                  // provide posts sorted by 'date' (optional)
+      reverse: true                    // sort direction (optional)
   }))
   .use(templates('jade'))
   .build(function(err){
