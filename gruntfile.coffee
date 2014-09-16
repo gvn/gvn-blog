@@ -30,12 +30,12 @@ module.exports = (grunt) ->
 
   grunt.registerTask "default", [
     "shell:build"
-  ]
-
-  grunt.registerTask "dev", [
-    "shell:build"
     "connect"
     "watch"
+  ]
+
+  grunt.registerTask "build", [
+    "shell:build"
   ]
 
   return
