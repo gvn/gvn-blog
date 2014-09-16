@@ -11,6 +11,10 @@ html
       h1=title
       p
         time=date
+      ul.tags
+        each tag in tags
+          li
+            a(href="/tags/" + tag)=tag
 
     main.markdown !{contents}
 
