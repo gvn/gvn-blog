@@ -17,7 +17,6 @@ var metalsmith = Metalsmith(__dirname)
   })
   .use(drafts())
   .use(markdown())
-  .use(permalinks())
   .use(collections({
     posts: {
       sortBy: 'date',
@@ -25,12 +24,13 @@ var metalsmith = Metalsmith(__dirname)
     }
   }))
   .use(tags({
-      handle: 'tags',                  // yaml key for tag list in you pages
-      path:'tags',                     // path for result pages
-      template:'tagged-posts.jade',    // template to use for tag listing
-      sortBy: 'date',                  // provide posts sorted by 'date' (optional)
-      reverse: true                    // sort direction (optional)
+      handle: 'tags',
+      path:'tags',
+      template:'tagged-posts.jade',
+      sortBy: 'date',
+      reverse: false
   }))
+  .use(permalinks())
   .use(templates('jade'))
   .build(function(err){
     if (err) throw err;

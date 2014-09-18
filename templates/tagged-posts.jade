@@ -1,4 +1,22 @@
-ul.link-list
-  each val in posts
-    li
-      a(href="/" + val.path)=val.title
+html
+  head
+    include header.jade
+  body
+    h2.logo
+      a(href="/")=global.title
+
+    hr
+
+    header
+      h2
+        span Posts tagged&nbsp;
+        strong &ldquo;#{tag}&rdquo;
+
+    ul.link-list
+      each val in posts
+        li
+          a(href="/" + val.path)=val.title
+
+    hr
+
+    include footer.jade
