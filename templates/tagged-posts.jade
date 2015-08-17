@@ -13,7 +13,7 @@ html
         strong &ldquo;#{tag}&rdquo;
 
     ul.link-list
-      each val in posts
+      each val in pagination.files
         li
           a(href="/" + val.path)=val.title
 

@@ -1,6 +1,17 @@
 {
   "name": "gvn-blog",
+  "description": "More posts about food and revolutionary art.",
+  "version": "0.1.0",
+  "author": "@gvn",
   "private": true,
+  "licenses": [
+    {
+      "type": "CC: BY-NC-SA",
+      "url": "http://creativecommons.org/licenses/by-nc-sa/3.0/deed.en_US"
+    }
+  ],
+  "bugs": "https://github.com/gvn/gvn-blog/issues",
+  "repository": "https://github.com/gvn/gvn-blog",
   "scripts": {
     "build": "node build",
     "server": "live-server build",
@@ -10,13 +21,13 @@
   "devDependencies": {
     "jade": "^1.5.0",
     "live-server": "^0.8.1",
-    "metalsmith": "^0.2.3",
-    "metalsmith-collections": "^0.6.0",
+    "metalsmith": "1.7.0",
+    "metalsmith-collections": "^0.7.0",
     "metalsmith-drafts": "0.0.1",
     "metalsmith-markdown": "^0.2.1",
-    "metalsmith-permalinks": "^0.3.2",
-    "metalsmith-tags": "git://github.com/boushley/metalsmith-tags.git#9d805a75c18c9add3a9b20adbee38dba42e5b731",
-    "metalsmith-templates": "^0.1.0",
+    "metalsmith-permalinks": "^0.4.0",
+    "metalsmith-tags": "^0.10.1",
+    "metalsmith-templates": "^0.7.0",
     "npm-run-all": "^1.2.6",
     "onchange": "^1.1.0"
   }

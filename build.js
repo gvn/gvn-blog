@@ -23,14 +23,14 @@ var metalsmith = Metalsmith(__dirname)
       reverse: false
     }
   }))
+  .use(permalinks())
   .use(tags({
       handle: 'tags',
-      path:'tags',
+      path:'tags/:tag/index.html',
       template:'tagged-posts.jade',
       sortBy: 'date',
       reverse: false
   }))
-  .use(permalinks())
   .use(templates('jade'))
   .build(function(err){
     if (err) throw err;
