@@ -198,7 +198,7 @@ header {
   }
   .tags li a:hover,
   .tags li a:focus {
-    background: #eee;
+    border: 1px solid rgba(237, 73, 165, 0.5);
     text-decoration: none;
   }
 
