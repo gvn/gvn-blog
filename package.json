@@ -1,16 +1,23 @@
 {
   "name": "gvn-blog",
   "private": true,
+  "scripts": {
+    "build": "node build",
+    "server": "live-server build",
+    "start": "npm run build && npm-run-all --parallel server watch",
+    "watch": "onchange 'templates/**/*.jade' 'src/**/*' 'build.js' -- npm run build"
+  },
   "devDependencies": {
-    "gulp": "^3.8.8",
-    "gulp-connect": "^2.0.6",
     "jade": "^1.5.0",
+    "live-server": "^0.8.1",
     "metalsmith": "^0.2.3",
     "metalsmith-collections": "^0.6.0",
     "metalsmith-drafts": "0.0.1",
     "metalsmith-markdown": "^0.2.1",
     "metalsmith-permalinks": "^0.3.2",
     "metalsmith-tags": "git://github.com/boushley/metalsmith-tags.git#9d805a75c18c9add3a9b20adbee38dba42e5b731",
-    "metalsmith-templates": "^0.1.0"
+    "metalsmith-templates": "^0.1.0",
+    "npm-run-all": "^1.2.6",
+    "onchange": "^1.1.0"
   }
 }
