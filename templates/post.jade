@@ -9,13 +9,9 @@ html
 
     header
       h1=title
-      ul.tags
-        each tag in tags
-          li
-            a(href="/tags/" + tag)=tag
       p
         time
-          em=date
+          em=publishDate
 
     main.markdown !{contents}
 
@@ -28,6 +24,11 @@ html
     if (next)
       p Previous Post:
       a(href='/' + next.path)=next.title
+      
+    ul.tags
+      each tag in tags
+        li
+          a(href="/tags/" + tag)=tag
 
     hr
 

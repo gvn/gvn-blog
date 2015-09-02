@@ -5,6 +5,7 @@ var permalinks = require('metalsmith-permalinks');
 var collections = require('metalsmith-collections');
 var drafts = require('metalsmith-drafts');
 var tags = require('metalsmith-tags');
+var dateFormatter = require('metalsmith-date-formatter');
 
 var metalsmith = Metalsmith(__dirname)
   .destination('./build')
@@ -15,11 +16,15 @@ var metalsmith = Metalsmith(__dirname)
       description: 'More Posts About Food and Revolutionary Art'
     }
   })
+  .use(dateFormatter({
+    key: 'publishDate',
+    format: 'MMMM Do, YYYY' // Moment.js syntax
+  }))
   .use(drafts())
   .use(markdown())
   .use(collections({
     posts: {
-      sortBy: 'date',
+      sortBy: 'publishDate',
       reverse: false
     }
   }))
