@@ -9,22 +9,24 @@ html
 
     header
       h1=title
-      p
+      p.subheader
         time
           em=publishDate
 
     main.markdown !{contents}
-
-    //- Labels to indicate reverse cronology
-
-    if (previous)
-      p Next Post:
-      a(href='/' + previous.path)=previous.title
-
-    if (next)
-      p Previous Post:
-      a(href='/' + next.path)=next.title
+    
+    div.interpost-navigator
       
+      .direction.previous
+        if (next)
+          p Previously
+          a(href='/' + next.path)=next.title
+    
+      .direction.next
+        if (previous)
+          p Next up
+          a(href='/' + previous.path)=previous.title
+    
     ul.tags
       each tag in tags
         li

@@ -25,7 +25,7 @@ var metalsmith = Metalsmith(__dirname)
   .use(collections({
     posts: {
       sortBy: 'publishDate',
-      reverse: false
+      reverse: true
     }
   }))
   .use(permalinks())
@@ -33,8 +33,8 @@ var metalsmith = Metalsmith(__dirname)
       handle: 'tags',
       path:'tags/:tag/index.html',
       template:'tagged-posts.jade',
-      sortBy: 'date',
-      reverse: false
+      sortBy: 'publishDate',
+      reverse: true
   }))
   .use(templates('jade'))
   .build(function(err){
