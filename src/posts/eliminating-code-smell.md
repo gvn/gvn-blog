@@ -1,11 +1,9 @@
 ---
 title: Eliminating Code Smell With Grunt
-date: December 12th, 2013
+date: 2013-12-12
 template: post.jade
 collection: posts
-tags:
-- grunt
-- javascript
+tags: grunt, javascript
 ---
 
 ## Intro
