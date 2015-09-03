@@ -4,5 +4,5 @@ node_modules
 TODO.txt
 _design/
 
-src/posts/dom-antipatterns-1.md
-src/posts/effective-design-systems.md
+dom-antipatterns-1.md
+effective-design-systems.md

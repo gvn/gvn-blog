@@ -11,6 +11,7 @@ var metalsmith = Metalsmith(__dirname)
   .destination('./build')
   .metadata({
     global: {
+      root: '/blog/',
       title: 'Gavin Lazar Suntop',
       author: 'Gavin Lazar Suntop',
       description: 'More Posts About Food and Revolutionary Art'
@@ -31,7 +32,7 @@ var metalsmith = Metalsmith(__dirname)
   .use(permalinks())
   .use(tags({
       handle: 'tags',
-      path:'tags/:tag/index.html',
+      path:'blog/tag/:tag/index.html',
       template:'tagged-posts.jade',
       sortBy: 'publishDate',
       reverse: true

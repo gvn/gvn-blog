@@ -152,7 +152,7 @@ To take things a little further, I decided to integrate our verification task wi
 
 This will result in your build failing if `grunt verify` doesn't pass. As a bonus, you'll get this lovely banner on your validated pull requests:
 
-![Light is green. Trap is clean.](/img/eliminating-code-smell/travis.png)
+![Light is green. Trap is clean.](/blog/img/eliminating-code-smell/travis.png)
 
 *"Light is green. Trap is clean."*
 

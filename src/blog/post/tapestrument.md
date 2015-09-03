@@ -7,19 +7,19 @@ collection: posts
 tags: projects, arduino, microcontrollers, music, art
 ---
 
-![The Tapestrument](/img/tapestrument/kitchen.jpg)
+![The Tapestrument](/blog/img/tapestrument/kitchen.jpg)
 
 A few years back when the Arduino microcontroller began to garner increasing attention among makers I also took notice. Electrical engineering has long both fascinated and frustrated me. When I was very young, I made frequent excursions to Radio Shack and subsequently attempted to cobble projects together from whatever components looked coolest. I never had luck doing much more than making LEDs blink or buzzers sound. Eventually, I discovered programming, which came far more intuitively to me. I left my soldering iron to gather dust and became absorbed in code.
 
-![Closeup of The Tapestrument](/img/tapestrument/closeup.jpg)
+![Closeup of The Tapestrument](/blog/img/tapestrument/closeup.jpg)
 
 The promise of microcontrollers, and Arduino in particular, to bridge the gap between high level programming and the world of electronics was very exciting. I enrolled in a single evening course at a local maker space and became instantly hooked. Arduino felt like an API to the physical world. Suddenly anything electronic could be programmable with endless creative possibilities.
 
-![Schematic](/img/tapestrument/schematic.png)
+![Schematic](/blog/img/tapestrument/schematic.png)
 
 In July of 2012 I attended "[The Record](http://nasher.duke.edu/therecord)" exhibition at the Henry Art Gallery. It proved massively inspiring and I decided to try and build an instrument. My initial desire was to create a MIDI controlled turntable that could have its motor speed changed by incoming notes. My quasi-rational fear of electrocution dictated that I move to battery powered devices. I settled on modifying a Walkman with the same basic intention: to adjust its playback speed based on incoming MIDI note values. In my mind it would be like a low-budget [Mellotron](https://en.wikipedia.org/wiki/Mellotron).
 
-![Recording drones from the JX-3P. Gaffer tape optional.](/img/tapestrument/synth.jpg)
+![Recording drones from the JX-3P. Gaffer tape optional.](/blog/img/tapestrument/synth.jpg)
 
 Over the next month or two I discovered that although the programming side of Arduino is  straightforward, the electrical side of the equation is still very challenging for me. Hardware is also much more difficult to work with by nature as there's no easy way to undo changes or save your progress. Eventually, I did end up with a working prototype that I dubbed The Tapestrument. To make its "voices" I recorded sustained notes from a JX-3P synthesizer onto cassettes. To indulge my fondness for alchemy I taped over Yanni and Michael Bolton albums procured from Value Village.
 
