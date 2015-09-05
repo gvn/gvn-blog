@@ -5,6 +5,7 @@ modifiedDate: 2013-12-12
 template: post.jade
 collection: posts
 tags: grunt, javascript
+thumbnail: eliminating-code-smell/og-thumb.jpg
 ---
 
 ## Intro

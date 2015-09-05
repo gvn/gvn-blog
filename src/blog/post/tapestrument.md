@@ -5,6 +5,7 @@ modifiedDate: 2015-09-04
 template: post.jade
 collection: posts
 tags: projects, arduino, microcontrollers, music, art
+thumbnail: tapestrument/kitchen.jpg
 ---
 
 ![The Tapestrument](/blog/img/tapestrument/kitchen.jpg)

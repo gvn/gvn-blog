@@ -1,6 +1,16 @@
 title=global.title
 meta(name='description', content=global.description)
 meta(name='viewport', content='width=device-width, target-densitydpi=160dpi, initial-scale=1.0')
+
+//- <meta property="og:url" content="http://www.imdb.com/title/tt0117500/" />
+
+//- OG:TAGS
+meta(property='og:site_name', content=global.title)
+meta(property='og:title', content=title || global.title)
+meta(property='og:description', content=global.title + ' – "' + global.description + '"')
+meta(property='og:type', content='website')
+meta(property='og:image', content=global.baseURL + '/blog/img/' + (thumbnail || 'headshot.jpg'))
+
 link(href=global.root+'css/main.css', media='all', rel='stylesheet', type='text/css')
 link(href=global.root+'css/glyphs.css', media='all', rel='stylesheet', type='text/css')
 link(href='http://fonts.googleapis.com/css?family=Oxygen:300', rel='stylesheet', type='text/css')

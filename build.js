@@ -14,7 +14,8 @@ var metalsmith = Metalsmith(__dirname)
       root: '/blog/',
       title: 'Gavin Lazar Suntop',
       author: 'Gavin Lazar Suntop',
-      description: 'More Posts About Food and Revolutionary Art'
+      description: 'More Posts About Food and Revolutionary Art',
+      baseURL: 'http://gsuntop.com'
     }
   })
   .use(dateFormatter({
