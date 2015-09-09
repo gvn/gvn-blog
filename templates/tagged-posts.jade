@@ -3,9 +3,9 @@ html
     include header.jade
   body
     h2.logo
-      a(href="/")=global.title
-
-    hr
+      span.sr-only=global.title
+      a(href="/")
+        img(src='/blog/img/wordmark.png')
 
     header
       h2

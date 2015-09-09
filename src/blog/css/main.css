@@ -36,6 +36,19 @@ body {
   padding: 10px;
 }
 
+/* UTILITIES -----------------------------------------------------------------  */
+
+.sr-only {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  padding: 0;
+  margin: -1px;
+  overflow: hidden;
+  clip: rect(0,0,0,0);
+  border: 0;
+}
+
 /* TYPOGRAPHY ----------------------------------------------------------------- */
 
 h1,
@@ -123,18 +136,24 @@ ul {
 
 hr {
   border: 0;
-  border-bottom: 1px solid #ccc;
+  border-bottom: 1px solid rgba(0,0,0,0.1);
   background: #fff;
   margin: 10px 0;
 }
 
 .logo {
-  font-family: 'Oxygen', 'Helvetica Neue', Helvetica, Arial, sans-serif;
-  display: inline-block;
-  font-weight: 300;
-  text-transform: uppercase;
-  letter-spacing: 0.2em;
+
 }
+  .logo img {
+    width: 100%;
+    margin: 0;
+    padding: 0;
+    border: 0;
+  }
+  h2.logo img {
+    opacity: 0.5;
+    margin-bottom: 10px;
+  }
 
 /* OTHER ---------------------------------------------------------------------- */
 
@@ -176,7 +195,7 @@ header {
 }
 
 .square-link {
-  padding: 0.25em 0.5em;
+  padding: 0.25em 0;
   font-family: 'Oxygen', sans-serif;
   font-size: 12px;
   line-height: 1.33em;

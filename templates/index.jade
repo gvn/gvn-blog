@@ -3,7 +3,9 @@ html
     include header.jade
   body
     header
-      h1.logo=global.title
+      h1.logo
+        span.sr-only=global.title
+        img(src='/blog/img/wordmark.png')
       p
         em=global.description
 
