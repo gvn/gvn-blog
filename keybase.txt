@@ -1,0 +1,76 @@
+==================================================================
+https://keybase.io/gvn
+--------------------------------------------------------------------
+
+I hereby claim:
+
+  * I am an admin of http://gsuntop.com
+  * I am gvn (https://keybase.io/gvn) on keybase.
+  * I have a public key with fingerprint 45E7 D73E 4EB9 17E6 9E1C  4BB6 7B8F D5AF 5D35 96B6
+
+To do so, I am signing this object:
+
+{
+    "body": {
+        "key": {
+            "eldest_kid": "010182423520371c8ee495b252dfc00f9eaf85d6dccb08a3e65db4276d9c98509f200a",
+            "fingerprint": "45e7d73e4eb917e69e1c4bb67b8fd5af5d3596b6",
+            "host": "keybase.io",
+            "key_id": "7b8fd5af5d3596b6",
+            "kid": "010182423520371c8ee495b252dfc00f9eaf85d6dccb08a3e65db4276d9c98509f200a",
+            "uid": "4d6f1c5a1d6891a24a2a2374d87dc500",
+            "username": "gvn"
+        },
+        "revoke": {
+            "sig_ids": [
+                "ec2752e24d3b1a305a8f390476bcd921f9367ebd5750db2eae3dba1901a89e930f"
+            ]
+        },
+        "service": {
+            "hostname": "gsuntop.com",
+            "protocol": "http:"
+        },
+        "type": "web_service_binding",
+        "version": 1
+    },
+    "ctime": 1457555117,
+    "expire_in": 157680000,
+    "prev": "fd6a7c8504408b92769c0ee07ff40710378b9ad41a4194d71b69955b4221c6d5",
+    "seqno": 23,
+    "tag": "signature"
+}
+
+which yields the signature:
+
+-----BEGIN PGP MESSAGE-----
+Version: Keybase OpenPGP v2.0.51
+Comment: https://keybase.io/crypto
+
+yMJxAnicrZJ7iFVFHMfvbm65S1FCihgSDhK1buvMnHmcuaRB+EeyPaAsiHa9zfPu
+cddzrveee3WTFTOTLEQEQVx6YOxqKVubBRlB+frD9+qSpplLIrlERvYwltqiOUv+
+15/NP8PMfH/f32e+M4fvuCXXVHd14dtne8SFpXXHD/xYzT377YbB1UAlpgfkV4Mu
+OznZbmMraaErMiAPIIIoxAQHFMOAIx1aSwRVmGLjNIROWOlCapjRWsFQBpZRowjm
+zAgtQgqFwxBK0AJcFBdtuVSO4tTbEmq54YElVgnELRMWaaIU4yp0hkpHTUAFU8wX
+diaVrMLDKVmxrVHi9/yiMIn3H/r/mbs6aUcMc0hTiQwLBZKYSCxxwIkJudEUwkxY
+seVYLrdeXazFoLcFlG0t6bJZpJWo6HkrIP88sBpzii0mJlBIBpDK0AUCEs6UNgIj
+JwLGrTKUU2gUttIGRkkkIJKhsCKADnR4b9+sFulJ8yygm40r1ThNSq06We6JSuUk
+TXTS7Q8607SUz5jSnlImXGlV4V+Lgopi4x/HF9RsuRIlMcgjr9RplHki4kkoRYi3
+ALuqFJVtIcoUlLMQ+pG1sTVv6QyTXPvoCIGhEj5KoaG1kDtHIEf+FfyuNARJggQx
+HCkmBKU+dIw0MxRkl1oRJyCPA88pi97T5xbLtFq2oPfg/vYpubqm3K0N9dmvzTU1
+3nXzL/c1T82tfWpg/M6jbxanTxs+8tPAvJPbr3x2vtQ/uPu3RQ/P/uICa+8YOv3W
+nobZ6/rGT22+vvXcJy3r750557bc+APDhVfO/8FemDt2eJfbKD6fPzRRPDfy5UuD
+b5zZuWZnY//oo9eGmqft3XKP+qBaa9+8fd+m5965NPr3g93zXjw4+tHpY73DzY/8
+Gh2K3JnWldtk20N7D4199+rlidcWgB+WLZq+hNRPufH9h3vOTn2y+PXdfUfo0+/d
+/9WO+urY4pFVbs3HP48eXXji+o6rS9qXbn13RrSg4/eJWZ+O9C9u27/uUml329pf
+xv9qvHjjxKbi67Oe2LDx4r71Zhl4ZkX9tT+T27+Z23nfwGMz5z/+8pwt729raPwH
+qaZjcA==
+=9DQX
+-----END PGP MESSAGE-----
+
+And finally, I am proving ownership of this host by posting or
+appending to this document.
+
+View my publicly-auditable identity here: https://keybase.io/gvn
+
+==================================================================
+
