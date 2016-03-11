@@ -41,7 +41,7 @@ Given these triggers, one can add corresponding tasks to commit compiled code on
 
 All scripts from `package.json` :
 
-`"preversion": "git checkout master && git pull mozilla master && npm test"`
+`"preversion": "git checkout master && git pull origin master && npm test"`
 
 This will ensure you're on the correct branch for creating your tag (probably `master`), check that you have the latest code, and finally that all tests pass as expected.
 
@@ -49,9 +49,9 @@ This will ensure you're on the correct branch for creating your tag (probably `m
 
 Run a build, which in this example creates a `dest` folder containing compiled assets. After the build is successfully completed, it will be staged in git (note that `-f` allows it to be staged despite the fact that it is .gitignore'd).
 
-`"postversion": "npm publish && git push mozilla --tags && git rm -r dest && git commit --amend --no-edit && git push mozilla master"`
+`"postversion": "npm publish && git push origin --tags && git rm -r dest && git commit --amend --no-edit && git push origin master"`
 
-Publish to npm, push the tag to the `mozilla` remote, remove the compiled folder, amend the previous commit to eliminate the compiled code, and finally push the commit to master.
+Publish to npm, push the tag to the `origin` remote, remove the compiled folder, amend the previous commit to eliminate the compiled code, and finally push the commit to master.
 
 ## Gotchas
 
