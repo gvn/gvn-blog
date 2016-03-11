@@ -16,7 +16,8 @@
     "build": "node build",
     "server": "live-server build --no-browser",
     "start": "npm run build && npm-run-all --parallel server watch",
-    "watch": "onchange 'templates/**/*.jade' 'src/**/*' 'build.js' -- npm run build"
+    "watch": "onchange 'templates/**/*.jade' 'src/**/*' 'build.js' -- npm run build",
+    "deploy": "./deploy.sh"
   },
   "devDependencies": {
     "jade": "1.11.0",
