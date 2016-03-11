@@ -91,13 +91,12 @@ h6, .h6 {
   font-size: 15px;
 }
 
-p {
+p, li {
   line-height: 1.66em;
   margin: 0.5em 0;
 }
 
-ul,
-ol {
+ul {
   list-style: none;
 }
 
@@ -127,10 +126,10 @@ pre code {
   font-family: Monaco, Consolas, 'Lucida Console', monospace;
 }
 
-ul {
+ul, ol {
   margin: 10px 0;
 }
-  ul li {
+  ul li, ol li {
     margin: 0.5em 0;
   }
 
@@ -248,6 +247,13 @@ header {
     list-style-position: inside;
     margin: 20px 0;
   }
+
+  .markdown ol {
+    margin: 20px 0;
+  }
+    .markdown ol li {
+      list-style-position: inside;
+    }
 
   .markdown hr {
     margin: 40px 0;
