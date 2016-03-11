@@ -4,8 +4,8 @@ publishDate: 2016-03-11
 modifiedDate: 2016-03-11
 template: post.jade
 collection: posts
-tags: npm
-thumbnail:
+tags: npm, code
+thumbnail: npm-front-end/npmlogo.jpg
 ---
 
 **Problem:**
