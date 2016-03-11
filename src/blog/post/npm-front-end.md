@@ -14,11 +14,11 @@ It's often useful to include compiled front-end code in npm modules (*eg: CSS tr
 
 **Antipattern:**
 
-Commit compiled code – often to a folder such as `dest`.
+Commit compiled code – often to a folder such as `dist`.
 
 **A Better Solution:**
 
-Commit compiled code to your tags as they are published to npm. In this manner, consumers get your compiled code while library co-developers do not.
+Commit compiled code *to your tags* as they are published to npm. In this manner, consumers get your compiled code while library co-developers do not.
 
 ## Enter NPM
 
@@ -55,7 +55,7 @@ Publish to npm, push the tag to the `mozilla` remote, remove the compiled folder
 
 ## Gotchas
 
-In order for this to work well you'll need to do a few things:
+In order for this all to work properly you'll need to do a few things:
 
 1. Add your compiled files to `.gitignore`. This will ensure no one accidentally commits them.
 2. Add a `.npmignore` file that contains the same excluded files as `.gitignore`, but **does not include references to your compiled files**. `.npmignore` takes precedence over `.gitignore`, and you *want* npm to include your compiled files as a convenience for library users.
