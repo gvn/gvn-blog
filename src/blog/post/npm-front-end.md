@@ -1,4 +1,12 @@
-# NPM for Front-end Libraries
+---
+title: NPM for Front-end Libraries
+publishDate: 2016-03-11
+modifiedDate: 2016-03-11
+template: post.jade
+collection: posts
+tags: npm
+thumbnail:
+---
 
 **Problem:**
 
