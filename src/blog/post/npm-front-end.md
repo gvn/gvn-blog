@@ -45,11 +45,11 @@ All scripts from `package.json` :
 
 This will ensure you're on the correct branch for creating your tag (probably `master`), check that you have the latest code, and finally that all tests pass as expected.
 
-`"version": "npm run build && git add -f dest"`
+`"version": "npm run build && git add -f dist"`
 
-Run a build, which in this example creates a `dest` folder containing compiled assets. After the build is successfully completed, it will be staged in git (note that `-f` allows it to be staged despite the fact that it is .gitignore'd).
+Run a build, which in this example creates a `dist` folder containing compiled assets. After the build is successfully completed, it will be staged in git (note that `-f` allows it to be staged despite the fact that it is .gitignore'd).
 
-`"postversion": "npm publish && git push origin --tags && git rm -r dest && git commit --amend --no-edit && git push origin master"`
+`"postversion": "npm publish && git push origin --tags && git rm -r dist && git commit --amend --no-edit && git push origin master"`
 
 Publish to npm, push the tag to the `origin` remote, remove the compiled folder, amend the previous commit to eliminate the compiled code, and finally push the commit to master.
 
