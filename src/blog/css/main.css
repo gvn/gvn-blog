@@ -122,6 +122,12 @@ p code {
   font-size: 0.9em;
 }
 
+pre {
+  background: #333;
+  color: #eee;
+  padding: 1em;
+}
+
 pre code {
   font-family: Monaco, Consolas, 'Lucida Console', monospace;
 }
@@ -153,6 +159,11 @@ hr {
     opacity: 0.5;
     margin-bottom: 10px;
   }
+
+blockquote {
+  background: #eee;
+  padding: 1em;
+}
 
 /* OTHER ---------------------------------------------------------------------- */
 
