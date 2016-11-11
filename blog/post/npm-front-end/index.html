@@ -1,0 +1,43 @@
+<html><head><title>Gavin Lazar Suntop</title><meta name="description" content="More Posts About Food and Revolutionary Art"/><meta name="viewport" content="width=device-width, target-densitydpi=160dpi, initial-scale=1.0"/><meta property="og:site_name" content="Gavin Lazar Suntop"/><meta property="og:title" content="npm for Front-end Libraries"/><meta property="og:description" content="Gavin Lazar Suntop – &quot;More Posts About Food and Revolutionary Art&quot;"/><meta property="og:type" content="website"/><meta property="og:image" content="http://gsuntop.com/blog/img/npm-front-end/npmlogo.jpg"/><link href="/blog/css/main.css" media="all" rel="stylesheet" type="text/css"/><link href="/blog/css/glyphs.css" media="all" rel="stylesheet" type="text/css"/></head><body><h2 class="logo"><span class="sr-only">Gavin Lazar Suntop</span><a href="/"><img src="/blog/img/wordmark.png"/></a></h2><header><h1>npm for Front-end Libraries</h1><p class="subheader"><time><em>March 11th, 2016 (Revised: November 11th, 2016)</em></time></p></header><main class="markdown"><p><strong>Problem:</strong></p>
+<p>It&#39;s often useful to include compiled front-end code in npm modules (<em>eg: CSS transpiled from SCSS</em>). However, it&#39;s suboptimal to commit compiled code to your repository because you end up with bloated diffs in your commit history and a higher chance of merge conflicts. You&#39;ll also end up with a much larger overall filesize for your repo, which will slow down pushes and pulls.</p>
+<p><strong>Antipattern:</strong></p>
+<p>Commit compiled code – often to a folder such as <code>dist</code>.</p>
+<p><strong>A Better Solution:</strong></p>
+<p>Only include compiled code in the bundle you publish to npm. In this manner, consumers get your compiled code while library co-developers do not.</p>
+<h2 id="basics">Basics</h2>
+<p>In order for this all to work properly you&#39;ll need to do a few things:</p>
+<p>First, add the folder(s) containing your compiled files to <code>.gitignore</code>. This will ensure no one accidentally commits compiled code.</p>
+<p>Second, add a <code>.npmignore</code> file that contains the same excluded files as <code>.gitignore</code>, but <em>does not include references to your compiled files</em>. <code>.npmignore</code> takes complete precedence over <code>.gitignore</code>, and you <em>want</em> npm to include your compiled files.</p>
+<p>If you can get by with only a few directories in your bundle, you can take a less repetitive approach by ignoring a wildcard patttern (<code>/*</code>) and overriding with just the files and folders you <em>do</em> want included by prepending them with a <code>!</code> (see example below).</p>
+<p><strong>Example: A more D.R.Y. <code>.npmignore</code> :</strong></p>
+<pre><code>/*
+!dest/
+!src/
+</code></pre><h2 id="level-up-with-versioning-hooks">Level Up With Versioning Hooks</h2>
+<p>Running <a href="https://docs.npmjs.com/cli/version"><code>npm version</code></a> is a convenient way to bump your module&#39;s version number (assuming you use <a href="http://semver.org/">semver</a> – which you should!). It also creates an associated tag and commit. Additionally, <code>npm version</code> can trigger three specially named npm scripts: <code>preversion</code>, <code>version</code>, and <code>postversion</code> during its execution.</p>
+<p><em>Excerpt from npm&#39;s <a href="https://docs.npmjs.com/cli/version">version</a> command documentation:</em></p>
+<blockquote>
+<p>If <code>preversion</code>, <code>version</code>, or <code>postversion</code> are in the scripts property of the package.json, they will be executed as part of running <code>npm version</code>.
+The exact order of execution is as follows:</p>
+<ol>
+<li>Check to make sure the git working directory is clean before we get started. Your scripts may add files to the commit in future steps. This step is skipped if the <code>--force</code> flag is set.</li>
+<li>Run the <code>preversion</code> script. These scripts have access to the old version in <code>package.json</code>. A typical use would be running your full test suite before deploying. Any files you want added to the commit should be explicitly added using <code>git add</code>.</li>
+<li>Bump version in <code>package.json</code> as requested (<code>patch</code>, <code>minor</code>, <code>major</code>, etc).</li>
+<li>Run the <code>version</code> script. These scripts have access to the new version in <code>package.json</code> (so they can incorporate it into file headers in generated files for example). Again, scripts should explicitly add generated files to the commit using <code>git add</code>.</li>
+<li>Commit and tag.</li>
+<li>Run the <code>postversion</code> script. Use it to clean up the file system or automatically push the commit and/or tag.</li>
+</ol>
+</blockquote>
+<p><strong>Example:</strong></p>
+<p>All scripts from <code>package.json</code> :</p>
+<p><code>&quot;preversion&quot;: &quot;git checkout master &amp;&amp; git pull origin master &amp;&amp; npm test&quot;</code></p>
+<p>This will ensure you&#39;re on the correct branch for creating your tag (probably <code>master</code>), check that you have the latest code, and finally that all tests pass as expected.</p>
+<p><code>&quot;version&quot;: &quot;npm run build&quot;</code></p>
+<p>Run a local build (assuming you have a npm script called <code>build</code>), which might for example create a <code>dist</code> folder containing compiled code. Since this step runs before your npm package is assembled you will end up with your compiled code available for bundling.</p>
+<p><code>&quot;postversion&quot;: &quot;npm publish &amp;&amp; git push origin master --tags&quot;</code></p>
+<p>Publish your new version to npm, push the bumped <code>package.json</code> to <code>master</code>, and push the newly created tag to the <code>origin</code> remote.</p>
+<h2 id="testing">Testing</h2>
+<p>While you&#39;re setting up your new workflow, it&#39;s nice to be able to see what will end up in your bundled package without actually publishing it. Currently, there&#39;s a <a href="https://github.com/npm/npm/issues/6351">ticket</a> open for adding a dry run option to <code>npm publish</code>, but for now: <code>tar -tf $(npm pack)</code> will list out files that will be published given your current configuration. <em>Note that you&#39;ll end up with a <code>tgz</code> file in the root of your local repository, so be sure to delete it afterward!</em></p>
+<h2 id="conclusion">Conclusion</h2>
+<p>Once you&#39;re all set up you can pat yourself on the back for leaving out a bunch of extraneous noise in your repo&#39;s history. You can also rest easy knowing that consumers of your library have the option to either compile it themselves, or be acceptably lazy and use precompiled (and consistently generated!) code.</p>
+</main><div class="interpost-navigator"><div class="direction previous"><p>Previously</p><a href="/blog/post/eliminating-code-smell">Eliminating Code Smell With Grunt</a></div><div class="direction next"><p>Next up</p><a href="/blog/post/tapestrument">The Tapestrument Revisited</a></div></div><ul class="tags"><li><a href="/blog/tag/npm">npm</a></li><li><a href="/blog/tag/code">code</a></li></ul><hr/><footer><a href="http://twitter.com/gvn" target="_blank" class="square-link"><i class="icon-twtr"></i> twitter / gvn</a><br/><a href="http://github.com/gvn" target="_blank" class="square-link"><i class="icon-gh"></i> github / gvn</a><br/><br/><a href="http://creativecommons.org/licenses/by-nc-sa/3.0/deed.en_US" target="_blank" class="square-link"><i class="icon-cc"></i> BY-NC-SA</a></footer></body></html>

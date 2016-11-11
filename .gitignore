@@ -1,0 +1,8 @@
+build
+node_modules
+.DS_Store
+TODO.txt
+_design/
+
+dom-antipatterns-1.md
+effective-design-systems.md
