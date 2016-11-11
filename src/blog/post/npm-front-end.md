@@ -1,7 +1,7 @@
 ---
 title: npm for Front-end Libraries
 publishDate: 2016-03-11
-modifiedDate: 2016-10-25
+modifiedDate: 2016-11-11
 template: post.jade
 collection: posts
 tags: npm, code

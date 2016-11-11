@@ -11,22 +11,26 @@ html
       h1=title
       p.subheader
         time
-          em=publishDate
+          if modifiedDate
+            em=`${publishDate} (Revised: ${modifiedDate})`
+          else
+            em=publishDate
+
 
     main.markdown !{contents}
-    
+
     div.interpost-navigator
-      
+
       .direction.previous
         if (next)
           p Previously
           a(href='/' + next.path)=next.title
-    
+
       .direction.next
         if (previous)
           p Next up
           a(href='/' + previous.path)=previous.title
-    
+
     ul.tags
       each tag in tags
         li
