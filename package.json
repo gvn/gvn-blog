@@ -16,12 +16,13 @@
     "build": "node build",
     "server": "live-server build --no-browser",
     "start": "npm run build && npm-run-all --parallel server watch",
-    "watch": "onchange 'templates/**/*.jade' 'src/**/*' 'build.js' -- npm run build",
+    "watch": "chokidar 'templates/**/*.jade' 'src/**/*' 'build.js' -c 'npm run build'",
     "deploy": "./deploy.sh"
   },
   "devDependencies": {
+    "chokidar-cli": "1.2.0",
     "jade": "1.11.0",
-    "live-server": "0.8.1",
+    "live-server": "1.1.0",
     "metalsmith": "1.7.0",
     "metalsmith-collections": "0.7.0",
     "metalsmith-date-formatter": "1.0.2",
@@ -30,7 +31,6 @@
     "metalsmith-permalinks": "0.4.0",
     "metalsmith-tags": "0.10.1",
     "metalsmith-templates": "0.7.0",
-    "npm-run-all": "1.2.8",
-    "onchange": "2.0.0"
+    "npm-run-all": "1.2.8"
   }
 }
